@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
-@Repository //comando n necessario
+@Repository //comando n necessario, pois a extensao ja inclui o @Repository
 public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, UUID> { //o JPA possui comandos basicos de um CRUD
     boolean existsByLicensePlateCar(String licensePlateCar);
     boolean existsByParkingSpotNumber(String parkingSpotNumber);
