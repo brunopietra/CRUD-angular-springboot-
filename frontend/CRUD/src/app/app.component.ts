@@ -9,13 +9,6 @@ import { TestBed } from '@angular/core/testing';
 export class AppComponent implements OnInit{
   title = 'CRUD';
 
-  modal = document.querySelector('.modal-container')
-  tbody = document.querySelector('tbody')
-  sNome = document.querySelector('#m-nome')
-  sFuncao = document.querySelector('#m-funcao')
-  sSalario = document.querySelector('#m-salario')
-  btnSalvar = document.querySelector('#btnSalvar')
-  btnCancel = document.querySelector('#btnCancel')
 
   itens: any
   id: number
@@ -26,8 +19,16 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(): void {
+    const modal = document.querySelector('.modal-container')
+    const tbody = document.querySelector('.tbody')
+    const sNome = document.querySelector('#m-nome')
+    const sFuncao = document.querySelector('#m-funcao')
+    const sSalario = document.querySelector('#m-salario')
+    const btnSalvar = document.querySelector('#btnSalvar')
+    const btnCancel = document.querySelector('#btnCancel')
+
     this.itens = this.getItensBD()
-    // this.tbody.innerHTML = ''
+    tbody.innerHTML = ''
     this.itens.forEach((item: any, index: number) => {
       this.insertItem(item, index)
     })
