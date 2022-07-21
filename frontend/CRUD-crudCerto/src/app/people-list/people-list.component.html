@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>People List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Namee</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let people of peoples | async">
+          <td>{{people.name}}</td>
+          <td>{{people.age}}</td>
+          <td><button (click)="deletePeople(people.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updatePeople(people.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="peopleDetails(people.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
