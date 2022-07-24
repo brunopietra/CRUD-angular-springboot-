@@ -6,17 +6,17 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Namee</th>
+          <th>Name</th>
           <th>Age</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let people of peoples | async">
-          <td>{{people.name}}</td>
-          <td>{{people.age}}</td>
-          <td><button (click)="deletePeople(people.id)" class="btn btn-danger">Delete</button>
-              <button (click)="updatePeople(people.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
-              <button (click)="peopleDetails(people.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        <tr *ngFor="let person of people">
+          <td>{{person.name}}</td>
+          <td>{{person.age}}</td>
+          <td><button (click)="deletePeople(person.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updatePeople(person.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="peopleDetails(person.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
           </td>
         </tr>
       </tbody>

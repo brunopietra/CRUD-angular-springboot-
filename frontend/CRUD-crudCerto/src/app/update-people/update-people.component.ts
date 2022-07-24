@@ -14,7 +14,7 @@ export class UpdatePeopleComponent implements OnInit {
   people: People;
 
   constructor(private route: ActivatedRoute,private router: Router,
-    private peopleService: People) { }
+  private peopleService: PeopleService) { }
 
   ngOnInit() {
     this.people = new People();

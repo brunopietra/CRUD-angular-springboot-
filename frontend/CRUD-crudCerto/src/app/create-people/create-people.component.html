@@ -3,12 +3,12 @@
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name">
+      <input type="text" class="form-control" id="name" required [(ngModel)]="people.name" name="name">
     </div>
 
     <div class="form-group">
       <label for="name">Age</label>
-      <input type="text" class="form-control" id="age" required [(ngModel)]="employee.age" name="age">
+      <input type="text" class="form-control" id="age" required [(ngModel)]="people.age" name="age">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>

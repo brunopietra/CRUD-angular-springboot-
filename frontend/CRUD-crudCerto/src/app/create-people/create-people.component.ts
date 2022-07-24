@@ -27,12 +27,15 @@ export class CreatePeopleComponent implements OnInit {
   save() {
     this.peopleService
     .createPeople(this.people).subscribe(data => {
-      console.log(data)
+      console.log("voltou backend")
       this.people = new People();
       this.gotoList();
     }, 
     error => console.log(error));
+    console.log("criou chamada")
   }
+
+
 
   onSubmit() {
     this.submitted = true;

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ["./people-list.component.css"]
 })
 export class PeopleListComponent implements OnInit {
-  people: Observable<People[]>;
+  people: People[];
 
   constructor(private peopleService: PeopleService,
     private router: Router) {}
@@ -21,7 +21,10 @@ export class PeopleListComponent implements OnInit {
   }
 
   reloadData() {
-    this.people = this.peopleService.getPeopleList();
+    this.peopleService.getPeopleList().subscribe(data => {
+      this.people = data;
+      console.log(this.people);
+    });
   }
 
   deletePeople(id: string) {
