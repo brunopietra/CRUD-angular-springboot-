@@ -16,7 +16,7 @@ public class PeopleModel implements Serializable {
     private UUID id;
     @Column(nullable = false, unique = true, length = 30)
     private String name;
-    @Column(nullable = false, unique = true, length = 3)
+    @Column(nullable = false, length = 3)
     private int age;
 
     public void setId(UUID id) {
